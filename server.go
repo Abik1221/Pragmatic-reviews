@@ -1,8 +1,6 @@
 package main
 
 import (
-	"github.com/dummy/gin-logger"
-	"github.com/dummy/gin-recovery"
 	"github.com/gin-gonic/gin"
 )
 
@@ -17,5 +15,5 @@ func main() {
 	})
 
 	server.Run(":8080")
-	
+
 }

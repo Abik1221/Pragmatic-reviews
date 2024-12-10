@@ -1,16 +1,13 @@
 package main
 
 import (
+	"github.com/dummy/gin-logger"
+	"github.com/dummy/gin-recovery"
 	"github.com/gin-gonic/gin"
-"github.com/dummy/gin-logger"
-"github.com/dummy/gin-recovery"
-"github.com/dummy/gin-gonic/gin/binding"
-"github.com/dummy/gin-gonic/gin/render",
 )
 
 func main() {
-	server := gin.New()
-	server.Use(gin.Logger(), gin.Recovery())
+	server := gin.Default()
 
 	server.GET("/test", func(c *gin.Context) {
 		c.JSON(200, gin.H{
@@ -20,4 +17,5 @@ func main() {
 	})
 
 	server.Run(":8080")
+	
 }
